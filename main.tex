@@ -1,0 +1,33 @@
+\documentclass[a4paper,10pt,twoside,twocolumn,openany]{book}
+
+\usepackage[english]{babel}
+
+\usepackage{lipsum}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage[tuenc]{fontspec}
+\newfontfamily\bladetwo{fonts/Blade2.ttf}
+
+\usepackage{dnd}
+
+\input{fixes} % LUCY FIXES SHIT, DO NOT TOUCH
+
+\lstset{%
+  basicstyle=\ttfamily,
+  language=[LaTeX]{TeX},
+}
+\usepackage[hidelinks]{hyperref}
+%\newcommand\bladefont[1]{{\usefont{T1}{Blade 2}{m}{n} #1 }}
+
+% Start document
+\begin{document}
+
+\frontmatter
+\input{__frontmatter/cover.tex}
+\input{__frontmatter/credits.tex}
+\tableofcontents
+\mainmatter
+\input{_content/how_to_play/main.tex}
+\input{_content/world/main.tex}
+\input{_content/westmarches/main.tex}
+\end{document}
